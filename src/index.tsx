@@ -14,27 +14,15 @@ let client=new ApolloClient({
   cache:new InMemoryCache()
 })
 
-client.query({
-  query:gql`{
-    getAllStudents {
-      id
-      name
-      contact
-      result {
-        subjectName
-        marks
-      }
-    }
-  }
-  `
-}).then((result)=>{console.log(result)});
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <ApolloProvider client={client}>
     <App />
+   </ApolloProvider>
   </React.StrictMode>
 );
 
