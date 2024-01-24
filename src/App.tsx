@@ -48,7 +48,7 @@ function App() {
                 {launch.id} {launch.name} {launch.contact}{' '}
                 {launch.result.map((subject) => (
                   <span key={subject.subjectId}>
-                    {subject.subjectName}: {subject.marks}{' '}
+                    {subject.subjectName} {subject.marks}{' '}
                   </span>
                 ))}
               </p>

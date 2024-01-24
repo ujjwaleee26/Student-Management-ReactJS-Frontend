@@ -4,9 +4,7 @@ import './index.css';
 import App from './App';
 import {ApolloClient,
         InMemoryCache,
-        ApolloProvider,
-        gql
-} from '@apollo/client';
+        ApolloProvider} from '@apollo/client';
 
 
 let client=new ApolloClient({
